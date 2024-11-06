@@ -1,0 +1,115 @@
+/* Reset margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Latar belakang animasi bergerak */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  background-size: cover;
+  animation: gradientAnimation 20s ease infinite;
+  color: white;
+  overflow-x: hidden;
+  height: 100vh;
+  background-image: url(../gambar4.png);
+}
+
+/* Container utama */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* Header dengan animasi muncul */
+.header {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Tombol dengan efek hover */
+.btn {
+  padding: 12px 25px;
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff5733;
+  transform: scale(1.1);
+}
+
+/* Seksi kedua dengan animasi geser */
+.section {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-out;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+}
+
+/* Animasi latar belakang */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animasi slideIn */
+@keyframes slideIn {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
